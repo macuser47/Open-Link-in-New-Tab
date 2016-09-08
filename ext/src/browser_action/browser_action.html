@@ -2,7 +2,7 @@
 <html>
 <head>
 <style type="text/css">
-	<!--#mainPopup {
+	#mainPopup {
 		padding: 10px;
 		height: 200px;
 		width: 400px;
@@ -10,16 +10,11 @@
 	}
 	h1 {
 		font-size: 2em;
-	}-->
+	}
     
-    <!-- https://kyusuf.com/post/completely-css-custom-checkbox-radio-buttons-and-select-boxes -->
-    #select {
-        border: solid black 20px;
-    }
+    /* https://kyusuf.com/post/completely-css-custom-checkbox-radio-buttons-and-select-boxes */
     
-    <!--
     .select {
-      border: solid black 2px;
       position: relative;
       display: inline-block;
       margin-bottom: 15px;
@@ -38,17 +33,16 @@
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
+      transition: color 0.5s;
+      transition: background 0.5s;
     }
     .select select::-ms-expand {
       display: none;
     }
     .select__arrow {
       position: absolute;
-      top: 16px;
+      top: 14px;
       right: 15px;
-      left:0;
-      bottom:0;
-      margin: 0;
       width: 0;
       height: 0;
       pointer-events: none;
@@ -56,6 +50,18 @@
       border-width: 8px 5px 0 5px;
       border-color: #7b7b7b transparent transparent transparent;
     }
+    .select select:hover {
+      color: #000;
+      background: #ccc;
+    }
+    .select select:hover ~ .select__arrow,
+    .select select:focus ~ .select__arrow {
+      border-top-color: #000;
+    }
+    .select select:disabled ~ .select__arrow {
+      border-top-color: #ccc;
+    }
+    
     
     #left_div {
         float: left;
@@ -69,37 +75,37 @@
         display: inline-block;
         width: 49%;
         height: 300px;
-        border: solid black 2px;
     }
     
-    #header {
-
-    }-->
+    /*
+    div {
+        border: solid black 2px;
+    }
+    */
 
     
 </style>
 </head>
 <body>
-    <!--<div id="mainPopup">-->
-        <!--<div id="header">
+    <div id="mainPopup">
+        <div id="header">
             <h1>Hello there!</h1>
             <h4>Have some settings.</h4>
-        </div>-->
+        </div>
     
-        <!--<div id="left_div">-->
-            <div id="select">
-                <!--<select>
+        <div id="left_div">
+            <div class="select">
+                <select>
                     <option value="Link_1">Link 1</option>
                     <option value="Link_2">Link 2</option>
                     <option value="custom">Custom</option>
-                </select>-->
-                <!--<div class="select__arrow"></div>-->
-                eeeee
+                </select>
+                <div class="select__arrow"></div>
             </div>
-        <!--</div>-->
-        <!--<div id="right_div">
+        </div>
+        <div id="right_div">
             <img id="preview" width=100% height=100%  src="https://upload.wikimedia.org/wikipedia/en/3/39/Wakerlink.jpg" />
-        </div>-->
-    <!--</div>-->
+        </div>
+    </div>
 </body>
 </html>
