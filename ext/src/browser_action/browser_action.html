@@ -1,90 +1,92 @@
 <!doctype html>
 <html>
 <head>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-    
-    /* https://kyusuf.com/post/completely-css-custom-checkbox-radio-buttons-and-select-boxes */
-    
-    .select {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    .select select {
-      display: inline-block;
-      width: 100%;
-      cursor: pointer;
-      padding: 10px 15px;
-      outline: 0;
-      border: 0;
-      border-radius: 0;
-      background: #e6e6e6;
-      color: #7b7b7b;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      transition: color 0.5s;
-      transition: background 0.5s;
-    }
-    .select select::-ms-expand {
-      display: none;
-    }
-    .select__arrow {
-      position: absolute;
-      top: 14px;
-      right: 15px;
-      width: 0;
-      height: 0;
-      pointer-events: none;
-      border-style: solid;
-      border-width: 8px 5px 0 5px;
-      border-color: #7b7b7b transparent transparent transparent;
-    }
-    .select select:hover {
-      color: #000;
-      background: #ccc;
-    }
-    .select select:hover ~ .select__arrow,
-    .select select:focus ~ .select__arrow {
-      border-top-color: #000;
-    }
-    .select select:disabled ~ .select__arrow {
-      border-top-color: #ccc;
-    }
-    
-    
-    #left_div {
-        float: left;
-        display: inline-block;
-        width: 49%;
-        height: 300px;
-    }
-    
-    #right_div {
-        float: right;
-        display: inline-block;
-        width: 49%;
-        height: 300px;
-    }
-    
-    /*
-    div {
-        border: solid black 2px;
-    }
-    */
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+    <style type="text/css">
+        #mainPopup {
+            padding: 10px;
+            height: 200px;
+            width: 400px;
+            font-family: Helvetica, Ubuntu, Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+        }
 
-    
-</style>
+        /* https://kyusuf.com/post/completely-css-custom-checkbox-radio-buttons-and-select-boxes */
+
+        .select {
+          position: relative;
+          display: inline-block;
+          margin-bottom: 15px;
+          width: 100%;
+        }
+        .select select {
+          display: inline-block;
+          width: 100%;
+          cursor: pointer;
+          padding: 10px 15px;
+          outline: 0;
+          border: 0;
+          border-radius: 0;
+          background: #e6e6e6;
+          color: #7b7b7b;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          transition: color 0.5s;
+          transition: background 0.5s;
+        }
+        .select select::-ms-expand {
+          display: none;
+        }
+        .select__arrow {
+          position: absolute;
+          top: 14px;
+          right: 15px;
+          width: 0;
+          height: 0;
+          pointer-events: none;
+          border-style: solid;
+          border-width: 8px 5px 0 5px;
+          border-color: #7b7b7b transparent transparent transparent;
+        }
+        .select select:hover {
+          color: #000;
+          background: #ccc;
+        }
+        .select select:hover ~ .select__arrow,
+        .select select:focus ~ .select__arrow {
+          border-top-color: #000;
+        }
+        .select select:disabled ~ .select__arrow {
+          border-top-color: #ccc;
+        }
+
+
+        #left_div {
+            float: left;
+            display: inline-block;
+            width: 49%;
+            height: 300px;
+        }
+
+        #right_div {
+            float: right;
+            display: inline-block;
+            width: 49%;
+            height: 300px;
+        }
+
+        /*
+        div {
+            border: solid black 2px;
+        }
+        */
+
+
+    </style>
 </head>
 <body>
     <div id="mainPopup">
@@ -95,16 +97,18 @@
     
         <div id="left_div">
             <div class="select">
-                <select>
+                <select id="imgSelect">
                     <option value="Link_1">Link 1</option>
                     <option value="Link_2">Link 2</option>
+                    <option value="Link_3">Link 3</option>
+                    <option value="Link_4">Link 4</option>
                     <option value="custom">Custom</option>
                 </select>
                 <div class="select__arrow"></div>
             </div>
         </div>
         <div id="right_div">
-            <img id="preview" width=100% height=100%  src="https://upload.wikimedia.org/wikipedia/en/3/39/Wakerlink.jpg" />
+            <img id="preview" width=100% height=100%  src="http://dc151.4shared.com/img/dFYIrS_4ce/14892ac5a90/buffering" />
         </div>
     </div>
 </body>
